@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Perfil</title>
+    <link rel="stylesheet" href="styleperfil.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-box">
+            <a href="login.php" class="back-button">
+         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+         <path d="M15 18l-6-6 6-6"/>
+         </svg>
+       </a>
+            <h1>Tu Perfil</h1>
+            <p class="description">Aquí encontrarás toda la información relacionada con tu cuenta.</p>
+
+            <form id="profile-form">
+                <label for="name">Tu Nombre</label>
+                <div class="input-group">
+                    <input type="text" id="name" name="name" value="Nueva Cuenta" disabled>
+                    <button type="button" class="edit-btn" onclick="toggleInput('name')">Cambiar</button>
+                </div>
+
+                <label for="email">Correo</label>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" value="ejemplocorreo@gmail.com" disabled>
+                    <button type="button" class="edit-btn" onclick="toggleInput('email')">Cambiar</button>
+                </div>
+
+                <div class="image-section">
+                    <div class="profile-image"></div>
+                    <button type="button" class="change-img">Cambiar Imagen</button>
+                </div>
+
+                <div class="delete-section">
+                    <p class="delete-text"><strong>Cerrar Sesión</strong><br>
+                    ¿Estás seguro de continuar?</p>
+                    <button type="button" class="delete-btn" onclick="deleteAccount()"><a href="logout.php"></a>Cerrar Sesión</a></button>
+                </div>
+
+                <div class="action-buttons">
+                    <button type="button" class="cancel-btn">Cancelar</button>
+                    <button type="submit" class="save-btn">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleInput(id) {
+            const input = document.getElementById(id);
+            input.disabled = !input.disabled;
+            if (!input.disabled) input.focus();
+        }
+
+        function deleteAccount() {
+            if (confirm("¿Estás seguro de que deseas cerrar sesión?")) {
+                alert("Cuenta cerrada correctamente.");
+                // Aquí iría lógica real para eliminar la cuenta
+            }
+        }
+    </script>
+</body>
+</html>

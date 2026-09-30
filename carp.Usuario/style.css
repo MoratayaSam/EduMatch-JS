@@ -1,0 +1,159 @@
+/*registro*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #638aec;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Formulario izquierdo */
+.form {
+  flex: 1;
+  padding: 30px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.form input {
+  padding: 10px;
+  margin-top: 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #c7d4f3;
+}
+
+.form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: rgb(232, 170, 88);
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 60%;
+  align-self: center;
+}
+
+.form button:hover {
+  background-color: rgb(208, 133, 34);
+}
+
+.form a {
+  text-align: center;
+  text-decoration: none;
+  margin-top: 15px;
+  color: black;
+}
+
+.form a:hover {
+  color: #5282FF;
+}
+
+/* Lado derecho */
+.side {
+  flex: 1;
+  background-color: #5282FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.side h2 {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.side img {
+  width: 520px;
+  height: 200px;
+}
+
+/* Media Queries */
+
+@media (max-width: 480px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form, .side {
+    width: 100%;
+  }
+
+  .side h2 {
+    font-size: 22px;
+  }
+
+  .form button {
+    width: 100%;
+  }
+
+  .form input {
+    font-size: 14px;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .form, .side {
+    width: 100%;
+  }
+
+  .side h2 {
+    font-size: 26px;
+  }
+
+  .form button {
+    width: 80%;
+  }
+}
+
+@media (min-width: 769px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .form, .side {
+    width: 50%;
+  }
+
+  .side h2 {
+    font-size: 32px;
+  }
+
+  .form button {
+    width: 60%; 
+  }
+}

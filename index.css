@@ -1,0 +1,267 @@
+.logo-navbar {
+  height: 55px;
+  object-fit: contain;
+}
+    
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 0;
+    }
+
+    .hero-section {
+      
+      position: relative;
+      background-color: #e6f0ff;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      padding: 20px 20px;
+      min-height: 350px;
+      display: flex;
+      align-items: center;
+      opacity: 1;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .benefit-card.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-title {
+      color: #6f42c1;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .hero-section h1 {
+      color: #3366cc;
+      font-weight: bold;
+      z-index: 2;
+      position: relative;
+    }
+
+    .hero-bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      image-rendering: auto;
+      z-index: 0;
+    }
+
+    .wave-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      line-height: 0;
+    }
+
+    .hero-img {
+      position: absolute;
+      bottom: 0;
+      height: 380px;
+      z-index: 2;
+      right: 60px;
+    }
+
+    .hero-section p {
+      color: #444;
+      z-index: 2;
+      position: relative;
+    }
+
+    .btn-buscar {
+      background-color: #3366ff;
+      color: black;
+      padding: 10px 25px;
+      border-radius: 20px;
+      border: none;
+      z-index: 2;
+      position: relative;
+    }
+
+    .benefit-card {
+      background-color: #edf1ff;
+      color: black;
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      height: 100%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .benefit-card.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .benefit-card i {
+      font-size: 2rem;
+      font-weight: bold;
+      color: black;
+    }
+
+    .benefit-card h5 {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .benefit-card p {
+      font-size: 14px;
+    }
+
+    .middle-card {
+      background-color: #fff4e6;
+      color: black;
+    }
+
+    .comment-title-box {
+      background-color: #fff4e6;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      display: inline-block;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .comment-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #333;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .comment-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #3366cc;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .comment-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      padding: 20px;
+      height: 100%;
+      background-color: black;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .comment-card:hover {
+      background-color: #eef3ff;
+      transform: translateY(-5px);
+    }
+
+    .user-icon {
+      font-size: 40px;
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .steps-section {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #f5f6fa;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      padding: 40px;
+      margin-top: 90px;
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .steps-section.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .steps-section h3 {
+      color: #375af0;
+      font-weight: bold;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .step-item {
+      margin-bottom: 20px;
+    }
+
+    .step-item strong {
+      font-weight: bold;
+      color: black;
+    }
+
+    .step-description {
+      margin-left: 25px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 30px 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        min-height: 150px;
+      }
+
+      .hero-img {
+        position: absolute;
+        bottom: 0;
+        height: 220px;
+        max-width: 100%;
+        left: 50%;
+        transform: translateX(50%);
+      }
+
+      .hero-section h1 {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .hero-section p {
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .btn-buscar {
+        font-size: 14px;
+        padding: 8px 20px;
+        margin-top: 10px;
+      }
+    }
